@@ -3,9 +3,9 @@
 	import '../app.css';
 </script>
 
-<Header />
 
-<main>
+<main class="relative w-full">
+	<Header />
 	<!--page content-->
 	<slot />
 </main>
