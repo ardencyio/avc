@@ -1,11 +1,12 @@
 <script>
 	import Header from '$lib/header/Header.svelte';
 	import '../app.css';
+    import Footer from '../lib/footer/footer.svelte';
 </script>
 
-
-<main class="relative w-full">
-	<Header />
-	<!--page content-->
+<Header />
+<main>
 	<slot />
 </main>
+
+

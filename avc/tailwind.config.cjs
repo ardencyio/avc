@@ -6,7 +6,9 @@ module.exports = {
       colors:{
         bg: '#F7F7F7',
         text: '#181818',
-        btn: '#353535',
+        'primary': '#353535',
+        'bg-nav': '#E5E5E5',
+        'bd':'#757575',
       },
 
       fontFamily: {
