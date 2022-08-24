@@ -9,7 +9,7 @@ import linkedin from '../../assets/linkedin-light.svg'
 
 <div class="">
     <p>Our Advisors.</p>
-    <div class="flex justify-around border-t border-white">
+    <div class="flex flex-col md:flex-row justify-around border-t border-white">
         <div>
             <img src={advisor1} alt="">
             <p class="text-center">John Demuren</p>

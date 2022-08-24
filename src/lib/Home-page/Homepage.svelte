@@ -8,8 +8,8 @@
     
     <div class="absolute z-30 w-full h-full">
     
-        <div class="w-9/12  h-full mx-auto flex flex-col justify-center py-4 gap-4">
-            <p class="font-comfortaa font-bold text-9xl my-2">ardency</p>
+        <div class="md:w-9/12 px-6 h-full mx-auto flex flex-col justify-center py-4 gap-4 overflow-hidden">
+            <p class="font-comfortaa font-bold text-7xl md:text-9xl my-2">ardency</p>
             <p class="font-Plus font-bold text-3xl tracking-wide">Invest in the Future of Africa</p>
             <p class="font-Plus max-w-[374px] tracking-wide"> We are a collective of mission-driven founders and funders building unicorns to solve start-ups’ biggest challenges.</p>
             <button

@@ -19,7 +19,7 @@
 </script>
 
 {#if visible}
-<div transition:fly="{{ x: 200, duration: 1000 }}" class="absolute h-screen w-full top-0 z-50 bg-bg-nav p-6" >
+<div in:fly="{{ x: 200, duration: 1000 } }" out:fly="{{ x: -200, duration: 1000 } }" class="fixed h-1/2 md:h-screen w-full top-0 z-50 bg-bg-nav p-6" >
     <div class="flex justify-end">
         <button on:click={()=> visible =!visible} class="text-3xl">
             <img src={menu} alt="">
@@ -29,7 +29,7 @@
     <ul class="flex flex-col h-full w-full justify-center items-end gap-4">
         {#each links as link }
         <li >
-          <a class='group text-right transition-all duration-300 ease-in-out font-Plus font-bold text-7xl text-primary' href={pathModifier(link)}>
+          <a class='group text-right transition-all duration-300 ease-in-out font-Plus font-bold text-2xl md:text-7xl text-primary' href={pathModifier(link)}>
             <span class='bg-left-bottom bg-gradient-to-r from-primary to-primary bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out'>
                 {link}
             </span>
