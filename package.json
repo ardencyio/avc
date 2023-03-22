@@ -1,6 +1,6 @@
 {
   "name": "avc",
-  "version": "1.1",
+  "version": "3.1.1",
   "description": "ardency.vc website",
   "type": "module",
   "private": true,
