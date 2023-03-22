@@ -1,0 +1,48 @@
+---
+// module imports
+import Layout from "../../layouts/Default.astro";
+import FormattedDate from "../../components/Date.astro";
+import Policy from "../../components/blocks/policy/Policy.astro";
+
+// library imports
+import { getCollection } from "astro:content";
+
+// scripts
+const title = "Documents";
+const posts = (await getCollection("policy")).sort(
+  (a, b) => a.data.updated.valueOf() - b.data.updated.valueOf()
+);
+---
+
+<Layout title={title}>
+  <div id="content-start" class="section">
+    <div class="container">
+      <div class="has-text-centered py-12">
+        <span class="tag is-primary is-curved is-outlined mb-2">Compliance</span>
+        <h2 class="title is-3">Important Documents</h2>
+        <p class="subtitle is-5 text-medium">
+          Please ensure you have read and accept these
+        </p>
+      </div>
+
+      <!-- Posts block v1 -->
+      <div class="pb-12">
+        <div class="posts-block-v1">
+          <div class="columns is-multiline b-columns-half-tablet-p">
+            {
+              posts.map((post) => (
+                <Policy
+                  title={post.data.title}
+                  description={post.data.description}
+                  image={post.data.image}
+                  avatar={post.data.avatar}
+                  slug={post.slug}
+                />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
